@@ -6,7 +6,8 @@ import java.util.Map;
 public class CharCount {
     public static void main(String[] args) {
         int[] arr = new int[50];
-        int random, count;
+        int[] count = new int[26];  // A ~ Z  26개
+        int random;
         Map<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             // 난수 생성 & 저장
@@ -22,24 +23,15 @@ public class CharCount {
         System.out.println("\n");
 
         // 각 문자 개수 계산
-        for (int j = 0; j < arr.length; j++) {
-            map.put((char)arr[j],map.get((char)arr[j]) + 1);
+        for(int i=0;i < arr.length;i++){
+            int num = arr[i] - 'A';
+            count[num]++;
         }
-
         // 각 문자 개수 출력
-        for(char data : map.keySet()){
-            System.out.println(data + " : " + map.get(data));
+        for(int i=0;i < count.length;i++){
+            System.out.println((char) (i+'A') + " : " + count[i]);
         }
 
-
-
-//        for (int i = 'A'; i <= 'Z'; i++) {
-//            count = 0;
-//            for (int j = 0; j < arr.length; j++) {
-//                if (i == (char) arr[j]) count++;
-//            }
-//            System.out.println((char) i + " : " + count);
-//        }
 
     }
 }

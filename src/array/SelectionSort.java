@@ -1,7 +1,5 @@
 package array;
 
-import java.util.Arrays;
-
 public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = {35, 48, 25, 72, 50};

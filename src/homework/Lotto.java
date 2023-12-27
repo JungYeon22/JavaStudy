@@ -32,9 +32,18 @@ public class Lotto {
                 lotto[j] = random;
             }
             // 출력
-            Arrays.sort(lotto);
+            for(int k=0;k < lotto.length;k++){
+                for(int j=k+1;j < lotto.length;j++){
+                    if(lotto[k] > lotto[j]) {
+                        int tmp = lotto[k];
+                        lotto[k] = lotto[j];
+                        lotto[j] = tmp;
+                    }
+                }
+            }
+            //Arrays.sort(lotto);
             for(int data : lotto){
-                System.out.print(data + " ");
+                System.out.print(String.format("%4d",data));
             }
             pageCheck++;
             System.out.println();
