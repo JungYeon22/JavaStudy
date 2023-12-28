@@ -10,61 +10,60 @@ public class SungJuk {
 
         String[][] subject = new String[cnt][];
         int[][] jumsu = new int[cnt][];
-        String[] name = new String[cnt];      //이름
+        String[] name = new String[cnt];      // 이름
         double[] avg = new double[cnt];
-
 
         System.out.println();
         //입력받기
-        for(int i=0;i < cnt;i++){             // 2번
+        for (int i = 0; i < cnt; i++) {             // 2번
             System.out.print("이름 입력 : ");
             name[i] = sc.next();                // 이름
             System.out.print("과목수 입력 : ");
             int subjectCnt = sc.nextInt();
-            subject[i] = new String[subjectCnt+1];
-            jumsu[i] = new int[subjectCnt+1];       // 총점도 담을 공간 확보
-            for(int j=0;j < subjectCnt;j++){
+            // 초기화
+            subject[i] = new String[subjectCnt + 1];
+            jumsu[i] = new int[subjectCnt + 1];       // 총점도 담을 공간 확보
+            for (int j = 0; j < subjectCnt; j++) {
                 System.out.print("과목명 입력 : ");
                 subject[i][j] = sc.next();
             }
             subject[i][subjectCnt] = "총점";
-
-            for(int j=0;j < subjectCnt;j++){
+            for (int j = 0; j < subjectCnt; j++) {
                 System.out.print(subject[i][j] + "점수 입력 : ");
                 jumsu[i][j] = sc.nextInt();
+                jumsu[i][subjectCnt] += jumsu[i][j];
             }
+            avg[i] = (double) jumsu[i][subjectCnt] / (jumsu[i].length - 1);
             System.out.println("----------------------------------");
         }
 
         // 총점 & 평균 구하기
-        for(int i=0;i < cnt;i++){
-            int sum = 0;                    // 총점
-            for(int j=0;j < jumsu[i].length-1;j++){
-                sum += jumsu[i][j];
-            }
-            jumsu[i][jumsu[i].length-1] = sum;
-            avg[i] = (double) sum / (jumsu[i].length-1);
-        }
+//        for (int i = 0; i < cnt; i++) {
+//            int sum = 0;                    // 총점
+//            for (int j = 0; j < jumsu[i].length - 1; j++) {
+//                sum += jumsu[i][j];
+//            }
+//            jumsu[i][jumsu[i].length - 1] = sum;
+//            avg[i] = (double) sum / (jumsu[i].length - 1);
+//        }
 
         //출력
-        for(int i=0;i < cnt;i++){
-            System.out.print("이름\t");
-            for(int j=0;j < subject[i].length;j++){
+        for (int i = 0; i < cnt; i++) {
+            System.out.print("이름\t\t");
+            for (int j = 0; j < subject[i].length; j++) {
                 String s = subject[i][j];
-                System.out.print(String.format("%5s", s));
+                System.out.print(s+"\t\t");
             }
-            System.out.println("  평균");
+            System.out.println("평균");
 
             // 값
-            System.out.print(String.format(name[i]) + "  ");
-            for(int j=0;j < jumsu[i].length;j++){
-                System.out.print(String.format("%6d", jumsu[i][j]));
+            System.out.print(String.format(name[i])+"\t");
+            for (int j = 0; j < jumsu[i].length; j++) {
+                System.out.print(jumsu[i][j] + "\t\t");
             }
-            System.out.println("  "+String.format("%6.2f", avg[i]));
+            System.out.println(avg[i]);
             System.out.println();
-
         }
-
     }
 }
 
