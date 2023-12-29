@@ -1,0 +1,23 @@
+package class2;
+
+import java.util.StringTokenizer;
+
+public class Token {
+    public static void main(String[] args) {
+        String str = "학원,집,,게임방";
+
+        StringTokenizer st = new StringTokenizer(str,",");
+        System.out.println("토큰 개수 = " + st.countTokens());
+
+        while(st.hasMoreTokens()){
+            System.out.println(st.nextToken());
+        }
+
+        System.out.println("--------------------------------");
+
+        String[] arr = str.split(",");
+        for(String data : arr){
+            System.out.println(data);
+        }
+    }
+}
