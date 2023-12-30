@@ -51,7 +51,7 @@ public class MemberService {
     }
 
     public void list(){
-        System.out.println("이름\t\t나이\t\t핸드폰\t\t주소");
+        System.out.println("이름\t\t\t나이\t\t\t핸드폰\t\t\t주소");
         for(int i=0;i < members.length;i++){
             if(members[i] != null){
                 System.out.println(members[i].getName()+"\t\t"+
@@ -76,7 +76,6 @@ public class MemberService {
     }
     public void delete(){
         System.out.print("핸드폰 번호 입력 : ");
-        boolean find = false;
         String phone = scanner.next();
         int memberNum = memberByPhone(phone);
         if(memberNum >= 0){

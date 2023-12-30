@@ -8,30 +8,20 @@ public class ExamMain {
         System.out.print("인원 : ");
         int num = sc.nextInt();
         Exam[] exams = new Exam[num];
-        for(int i=0;i < num;i++){
-            System.out.print("이름 입력 : ");
-            String name = sc.next();
-            System.out.print("답 입력 : ");
-            String answer = sc.next();
-            exams[i] = new Exam(name, answer);
+        for (int i = 0; i < num; i++) {
+            exams[i] = new Exam();
             System.out.println();
         }
         System.out.println("-------------------------------");
         System.out.println("이름\t\t1  2  3  4  5  점수");
         System.out.println("-------------------------------");
-        for(int i=0;i < num;i++){
-
+        for (int i = 0; i < num; i++) {
             System.out.print(exams[i].getName() + "\t");
-            for(int j=0;j < exams[i].getOx().length;j++){
-                System.out.print(exams[i].getOx()[j]+"  ");
+            for (int j = 0; j < exams[i].getOx().length; j++) {
+                System.out.print(exams[i].getOx()[j] + "  ");
             }
             System.out.println(exams[i].getScore());
         }
-
-
-
-
-
     }
 }
 /*
