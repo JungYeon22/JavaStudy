@@ -25,9 +25,6 @@ public class MemberService {
                 case 5: con = false; break; // 종료
             }
         }
-
-
-
     }
     public void insert(){
         boolean success = false;
@@ -61,6 +58,7 @@ public class MemberService {
             }
         }
     }
+
     public void update(){
         System.out.print("핸드폰 번호 입력 : ");
         String phone = scanner.next();
@@ -74,6 +72,7 @@ public class MemberService {
             System.out.println("찾는 회원이 없습니다.");
         }
     }
+
     public void delete(){
         System.out.print("핸드폰 번호 입력 : ");
         String phone = scanner.next();
@@ -85,7 +84,6 @@ public class MemberService {
         else {
             System.out.println("찾는 회원이 없습니다.");
         }
-
     }
 
     private int memberByPhone(String phone) {

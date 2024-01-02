@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaStudy.iml" filepath="$PROJECT_DIR$/JavaStudy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/class05/class05.iml" filepath="$PROJECT_DIR$/class05/class05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_05_class/_05_class.iml" filepath="$PROJECT_DIR$/_05_class/_05_class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_06_inheritance/_06_inheritance.iml" filepath="$PROJECT_DIR$/_06_inheritance/_06_inheritance.iml" />
     </modules>
   </component>
 </project>
