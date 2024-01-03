@@ -51,10 +51,7 @@ public class MemberService {
         System.out.println("이름\t\t\t나이\t\t\t핸드폰\t\t\t주소");
         for(int i=0;i < members.length;i++){
             if(members[i] != null){
-                System.out.println(members[i].getName()+"\t\t"+
-                        members[i].getAge() + "\t\t" +
-                        members[i].getPhone()+ "\t\t" +
-                        members[i].getAddress());
+                System.out.println(members[i]);
             }
         }
     }

@@ -25,6 +25,14 @@ public class MemberDTO {
         return phone;
     }
 
+    @Override
+    public String toString() {
+        return name + "\t\t" +
+                age + "\t\t" +
+                phone + "\t\t" +
+                address;
+    }
+
     public String getAddress() {
         return address;
     }
