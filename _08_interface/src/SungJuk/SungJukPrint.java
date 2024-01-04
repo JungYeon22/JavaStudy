@@ -15,10 +15,3 @@ public class SungJukPrint implements SungJuk{
         }
     }
 }
-/*
-8. SungJukPrint.java
-- ArrayList에 저장된 모든 데이터를 출력한다.
-
-번호	이름	국어	영어	수학 	총점	평균
-
- */
