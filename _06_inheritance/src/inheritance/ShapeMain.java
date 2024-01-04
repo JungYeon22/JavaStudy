@@ -16,6 +16,7 @@ abstract class ShapeTest{
     public void displayArea(){
         System.out.println("도형을 출력합니다.");
     }
+
 }
 //------------------------------------------------------
 class SamTest extends ShapeTest{
@@ -36,6 +37,7 @@ class SamTest extends ShapeTest{
     public void displayArea(){
         System.out.println("삼각형 넓이 : " + area);
     }
+
 }
 //------------------------------------------------------
 class SaTest extends ShapeTest{
@@ -56,6 +58,7 @@ class SaTest extends ShapeTest{
     public void displayArea(){
         System.out.println("사각형 넓이 : " + area);
     }
+
 }
 //------------------------------------------------------
 class SadariTest extends ShapeTest{
@@ -109,7 +112,6 @@ public class ShapeMain {
         shape.displayArea();
         System.out.println();
 
-
         shape = new SaTest();
         shape.calcArea();
         shape.displayArea();
@@ -119,7 +121,6 @@ public class ShapeMain {
         shape.calcArea();
         shape.displayArea();
         System.out.println();
-
 
     }
 }

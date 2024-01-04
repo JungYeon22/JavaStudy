@@ -3,9 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaStudy.iml" filepath="$PROJECT_DIR$/JavaStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_04_array/_04_array.iml" filepath="$PROJECT_DIR$/_04_array/_04_array.iml" />
       <module fileurl="file://$PROJECT_DIR$/_05_class/_05_class.iml" filepath="$PROJECT_DIR$/_05_class/_05_class.iml" />
       <module fileurl="file://$PROJECT_DIR$/_06_inheritance/_06_inheritance.iml" filepath="$PROJECT_DIR$/_06_inheritance/_06_inheritance.iml" />
       <module fileurl="file://$PROJECT_DIR$/_07abstract/_07abstract.iml" filepath="$PROJECT_DIR$/_07abstract/_07abstract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_08_interface/_08_interface.iml" filepath="$PROJECT_DIR$/_08_interface/_08_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_09_nested/_09_nested.iml" filepath="$PROJECT_DIR$/_09_nested/_09_nested.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_10_collection/_10_collection.iml" filepath="$PROJECT_DIR$/_10_collection/_10_collection.iml" />
     </modules>
   </component>
 </project>

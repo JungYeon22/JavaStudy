@@ -13,8 +13,8 @@ class CalendarEX{
     private int year;
     private int month;
     private String targetDate;
-    private int startWeekday;
-    private int targetDayCount;
+    private int firstDay;
+    private int lastDay;
 
     public CalendarEX() throws ParseException {
         Scanner scanner = new Scanner(System.in);
@@ -26,35 +26,38 @@ class CalendarEX{
     }
 
     public void calc() throws ParseException {
-        String monthStr = "";
-        if(month < 10){
-            monthStr = "0" + month;
-        }else {
-            monthStr = String.valueOf(month);
-        }
-        targetDate = String.valueOf(year) + monthStr + "01";
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
-        Date firstDay = simpleDateFormat.parse(targetDate);
+//        String monthStr = "";
+//        if(month < 10){
+//            monthStr = "0" + month;
+//        }else {
+//            monthStr = String.valueOf(month);
+//        }
+//        targetDate = String.valueOf(year) + monthStr + "01";        // 해당 달력 1일 문자열, ex)20240101
+//
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+//        Date firstDay = simpleDateFormat.parse(targetDate);
         Calendar c = Calendar.getInstance();
-        c.setTime(firstDay);            // 캘린더 설정
+//        c.setTime(firstDay);            // 캘린더 설정
 
-        startWeekday = c.get(c.DAY_OF_WEEK);
+        c.set(year, month-1, 1);
 
-        c.add(c.MONTH, +1);     // 한달 후
-        c.add(c.DATE, -1);      // 1일 전
-        targetDayCount = c.get(c.DAY_OF_MONTH);
+        firstDay = c.get(c.DAY_OF_WEEK);
+        lastDay = c.getActualMaximum(c.DAY_OF_MONTH);
 
-        String format = simpleDateFormat.format(c.getTime());
-
+//        c.add(c.MONTH, +1);     // 한달 후
+//        c.add(c.DATE, -1);      // 1일 전
+//        lastDay = c.get(c.DAY_OF_MONTH);
     }
+
     public void display(){
         System.out.println("일\t월\t화\t수\t목\t금\t토");
-        for(int i=0;i < startWeekday-1;i++){
+        System.out.println("----------------------------");
+        for(int i=0;i < firstDay-1;i++){
             System.out.print("\t");
         }
-        for(int i=1;i <= targetDayCount;i++){
+        for(int i=1;i <= lastDay;i++){
             System.out.print(i + "\t");
-            if(i % 7 == 8 - startWeekday) System.out.println();
+            if(i % 7 == 8 - firstDay) System.out.println();
         }
     }
 
