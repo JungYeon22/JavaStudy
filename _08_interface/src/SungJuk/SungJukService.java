@@ -35,7 +35,7 @@ public class SungJukService {
                     break;
                 case 4: sungJuk = new SungJukDelete();
                     break;
-                case 5:
+                case 5: sungJuk = new SungJukSort();
                     break;
                 case 6: play = false;
                     break;

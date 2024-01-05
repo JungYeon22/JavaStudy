@@ -2,7 +2,7 @@ package SungJuk;
 
 import java.util.Scanner;
 
-public class SungJukDTO {
+public class SungJukDTO implements Comparable<SungJukDTO>{
     private int no;
     private String name;
     private int kor, eng, math, tot;
@@ -47,5 +47,12 @@ public class SungJukDTO {
         this.eng = eng;
         this.math = math;
         calc();
+    }
+
+    @Override
+    public int compareTo(SungJukDTO sungJukDTO) {       // 총점으로 내림차순
+        if(this.tot > sungJukDTO.tot) return -1;
+        else if(this.tot < sungJukDTO.tot) return 1;
+        else return 0;
     }
 }
