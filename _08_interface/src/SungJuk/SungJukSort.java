@@ -2,6 +2,7 @@ package SungJuk;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class SungJukSort implements SungJuk{
@@ -10,7 +11,15 @@ public class SungJukSort implements SungJuk{
     public void execute(ArrayList<SungJukDTO> list) {
         int num = sortMenu();           // 메뉴 번호
         if(num == 1) Collections.sort(list);
-        if(num == 2) System.out.println("준비중,,");
+        if(num == 2) {
+            Comparator<SungJukDTO> comparator = new Comparator<SungJukDTO>() {
+                @Override
+                public int compare(SungJukDTO o1, SungJukDTO o2) {
+                    return o1.getName().compareTo(o2.getName());
+                }
+            };
+            Collections.sort(list, comparator);
+        }
         if(num == 3) return;
     }
 
