@@ -3,26 +3,19 @@ package book;
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class BookDTO implements Serializable {
+public class BookDTO implements Serializable {      // 파일에 넣을 객체로서 직렬화 implements 해야함
     private String code, title, author;
     private int price, qty, total;
 
-    public BookDTO() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("도서 코드 입력: ");
-        this.code = scanner.next();
-        System.out.print("도서 제목 입력 : ");
-        this.title = scanner.next();
-        System.out.print("작가 입력 : ");
-        this.author = scanner.next();
-        System.out.print("도서 가격 : ");
-        this.price = scanner.nextInt();
-        System.out.print("구입할 도서 개수 : ");
-        this.qty = scanner.nextInt();
-        calc();
+    public BookDTO(String code, String title, String author, int price, int qty) {
+        this.code = code;
+        this.title = title;
+        this.author = author;
+        this.price = price;
+        this.qty = qty;
     }
 
-    private void calc() {
+    public void calc() {
         this.total = price * qty;
     }
 

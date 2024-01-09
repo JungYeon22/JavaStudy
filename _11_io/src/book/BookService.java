@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BookService {
-    private ArrayList<BookDTO> list = new ArrayList<>();
+    private ArrayList<BookDTO> list = new ArrayList<>();     // 스프링은 interface로 구성되어있어서 List<> list = new ArraryList<>();  형태를 많이 사용
     public void menu() throws IOException, ClassNotFoundException {
         boolean play = true;
         while(play){
